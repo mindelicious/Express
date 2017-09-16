@@ -15,10 +15,11 @@ app.get('/getNote', function(req, res) {
 
 app.post('/updateNote/:note', function(req, res) {
     stringifyFile = req.params.note;
-    fs.writeFile('./test.json', stringifyFile, function(req, res, next) {
+    fs.writeFile('./test.json', stringifyFile, function(req, res, err) {
         if (err) throw err;
         console.log('file updated');
     });
+
 });
 
 app.listen(3000);
