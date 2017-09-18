@@ -1,0 +1,26 @@
+{
+  "name": "kodillaexpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mindelicious/Express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mindelicious/Express/issues"
+  },
+  "homepage": "https://github.com/mindelicious/Express#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "express": "^4.13.4"
+  }
+}
