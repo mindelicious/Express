@@ -30,7 +30,7 @@ passport.use(new GoogleStrategy({
 ));
 
 app.set('view engine', 'pug');
-app.set('views', + './views');
+app.set('views', './views');
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -51,6 +51,6 @@ app.get('/auth/google/callback',
     passport.authenticate('google', {
         successRedirect : '/logged',
         failureRedirect: '/'
-    }));
+    }));    
 
-app.listen(3000);
+app.listen(3000);   
