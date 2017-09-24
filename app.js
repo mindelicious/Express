@@ -6,8 +6,8 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const dotenv = require('dotenv');
-const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
+const passport = require('passport');
 const flash = require('connect-flash');
 
 dotenv.load();
