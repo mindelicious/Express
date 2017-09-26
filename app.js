@@ -6,9 +6,10 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const dotenv = require('dotenv');
-const Auth0Strategy = require('passport-auth0');
 const passport = require('passport');
+const Auth0Strategy = require('passport-auth0');
 const flash = require('connect-flash');
+var ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn();
 
 dotenv.load();
 
@@ -90,6 +91,7 @@ app.use(function(req, res, next) {
 
 app.use('/', routes);
 app.use('/user', user);
+app.use('/profile', ensureLoggedIn, require('./profile')());
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
